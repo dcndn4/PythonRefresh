@@ -8,3 +8,16 @@ Want to list the various libraries and what they contain, when the things need t
 And then prep to move towards GIS technologies!!
 
 whoop! there it is!
+
+Environment list:
+
+Base anaconda
+Dev
+Alpaca Env
+PyVizEnv
+SqlAlchViz
+TSML PyViz
+mlenv
+deeplrn
+Build Block
+
