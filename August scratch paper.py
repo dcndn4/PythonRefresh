@@ -74,3 +74,65 @@ print(min(repeat(lambda: dict(chain(x.items(), y.items())))))
 print(min(repeat(lambda: dict(item for d in (x, y) for item in d.items()))))
 
 #%%
+
+xs = [8, 23, 45]
+#%%
+# question
+#for x in xs: 
+#    print("item #{} = {}".format(index,x))
+
+for idx, x in enumerate(xs):
+    print(idx, x)
+    
+#%%
+
+# to have the first index set to 1:
+
+for idx, x in enumerate(xs, start=1):
+    print(idx, x)
+#%%
+
+# non-idiomatic option 1
+
+items = [18, 22, 25, 17, 29]
+
+index = 0
+for item in items:
+    print(index, item)
+    index += 1
+    
+    
+#%%
+
+# non-idiomatic option 2
+
+smeti = [37, 82, 1001199, 5, 725, 87]
+
+index = 0
+while index < len(smeti):
+    print(index, smeti[index])
+    index += 1
+
+#%%
+
+
+# non-idiomatic option 3
+
+hello = [22, 44, 88, 1252, 99999]
+
+for index in range(len(hello)):
+    print(index, hello[index])
+    
+#%%
+
+# to get a count
+
+count = 0 
+for count, item in enumerate(hello, start=1):
+    print(item)
+    
+print('there were {0} items printed'.format(count))
+
+#%%
+
+    
