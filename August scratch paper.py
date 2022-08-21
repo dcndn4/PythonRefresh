@@ -135,4 +135,45 @@ print('there were {0} items printed'.format(count))
 
 #%%
 
+# 8.21.22
+
+List1 = ["2,6,4,5", "3,7,4,2"]
+#%%
+List2 = ["15,2000,65,1", "529, 6123, 777, 82"]
+
+sortedList = []
+#%%
+# this solution doesn't work for  numbers > 10, not sure why yet
+
+for s in List2:
+    nums = s.split(",")
+    nums.sort()
+    sortedList.append(",".join(nums))
     
+#%%
+
+for s in List2:
+    nums = s.split(",")
+    nums = list(map(int,nums))
+    nums.sort()
+    nums = list(map(str,nums))
+    sortedList.append(",".join(nums))
+    
+#%%
+
+# using ast.literal eval -- result is printed, but actual list isn't changed
+
+import ast
+
+List3 = ["17,3000,45,3", "659,723,1456,19"]
+print([",".join(map(str, sorted(ast.literal_eval(item)))) for item in List3])
+
+#%%
+
+List4 = ["57,259,83,1745", "22222,598,75,3"]
+
+#%%
+
+# this doesn't seem to yield desired result at all.. not sorted, and split by periods.. hmmm..
+
+Output = ['.'.join(sorted(lis)) for lis in [s.split(',') for s in List4]]
