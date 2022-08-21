@@ -8,6 +8,9 @@ Created on Fri Aug 19 05:03:46 2022
 # reviewing
 
 import pandas as pd
+import numpy as np
+
+#%%
 
 df = pd.DataFrame({"Car": ['Car 1', 'Car 2', 'Car 3', 'Car 4', 'Car 5'], 
                    "Model": ['Nissan', 'Nissan', 'Toyota', 'Ford', 'Checkers'],
@@ -177,3 +180,57 @@ List4 = ["57,259,83,1745", "22222,598,75,3"]
 # this doesn't seem to yield desired result at all.. not sorted, and split by periods.. hmmm..
 
 Output = ['.'.join(sorted(lis)) for lis in [s.split(',') for s in List4]]
+
+#%%
+
+print(np.unravel_index([22, 41, 37], (7,6)))
+
+#%%
+
+x = np.array([[4,  2],
+              [9,  3],
+              [8,  5],
+              [3,  3],
+              [5,  6]])
+
+#%%
+
+print(x.shape)
+
+#%%
+
+idx = np.where(x==3)
+print(idx)
+#%%
+
+idx_flat = np.ravel_multi_index(idx, x.shape)
+print(idx_flat)
+
+#%%
+
+x_linear = x.ravel()
+print(x_linear)
+
+#%%
+
+idx_new = np.unravel_index(idx_flat , x.shape)
+print(idx_new)
+#%%
+
+# this response uses a set of random numbers as the starting point, forgot it was that easy to get those
+
+my_array = np.random.random((100, 42))  # 2D set
+raveled_array = my_array.ravel()    # 1D set
+
+raveled_index = 1337
+
+#%%
+
+# this is extra confusing to me
+
+unraveled_index = np.unravel_index(raveled_index, my_array.shape)
+
+#%%
+
+assert raveled_array[raveled_index] == my_array[unraveled_index]
+
