@@ -9,6 +9,9 @@ Created on Fri Aug 19 05:03:46 2022
 
 import pandas as pd
 import numpy as np
+import datetime
+import time
+import pytz
 
 #%%
 
@@ -98,6 +101,8 @@ for idx, x in enumerate(xs, start=1):
 # non-idiomatic option 1
 
 items = [18, 22, 25, 17, 29]
+
+#%%
 
 index = 0
 for item in items:
@@ -234,3 +239,86 @@ unraveled_index = np.unravel_index(raveled_index, my_array.shape)
 
 assert raveled_array[raveled_index] == my_array[unraveled_index]
 
+#%%
+
+now = datetime.datetime.now()
+
+print(now)
+
+#%%
+
+now.time()
+
+datetime.datetime(2009, 1, 6, 15, 8, 24, 78915)
+print(now)
+
+#%%
+
+
+
+from datetime import datetime
+
+print(datetime.now().strftime('%Y-%m-%d %H:%m:%S'))
+
+#%%
+
+from datetime import localtime, strftime
+
+print(strftime("%Y-%m_%d %H:%M:%S", localtime()))
+
+# Message - cannot import 'localtime' -- hmmm
+
+#%%
+
+
+print(time.time())
+
+# number of seconds since 1.1.70 0000
+
+#%%
+
+# my fav so far
+
+print(time.ctime())
+
+#%%
+
+print(datetime.datetime.utcnow())
+
+# so UTC is 5 hours ahead of me (at the moment)
+
+#%%
+
+# time zone aware == more on that another time
+
+then = datetime.datetime.now(pytz.utc)
+
+print(then)
+
+#%%
+
+from time import ctime
+
+print(ctime())
+
+# Like!
+
+#%%
+
+# How to sort dictionary
+
+x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+
+# dictionary with unsorted contents
+
+#%%
+print({k: v for k, v in sorted(x.items(), key=lambda item: item[1])})
+
+# dictionary contents still unsorted, but printed representation of dictionary is in sorted order
+#%%
+
+print(dict(sorted(x.items(), key=lambda item: item[1])))
+
+# same result
+
+#%%
