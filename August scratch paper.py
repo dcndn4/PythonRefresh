@@ -323,73 +323,25 @@ print(dict(sorted(x.items(), key=lambda item: item[1])))
 
 #%%
 
-# find 2 keys in nested dictionary, return key value pair
-
-d = {
-     "aaa":{
-         "bbb":"xyz",
-         "ccc":{
-             "description":"xyz",
-             "data":"abc"
-             },
-         "description":"xyz"
-         },
-     "xxx":{
-         "description":"xyz",
-         "bbb":{
-             "ccc":{
-                 "ddd":{
-                 "description": "xyz"
-                 },
-             "aaa":{
-                 "description":{
-                     "hhh": "xyz"
-                     }
-                 },
-             "zzz":{
-                 "description":"xyz"
-                 }
-             }
-         },
-     "lll":{
-         "description":"xyz",
-         "bbb":{
-             "ccc":{
-                 "hhh":{
-                     "description":"xyz"
-                     },
-                 "ooo":{
-                     "description":"xyz",
-                     "aaa":{
-                         "ddd":{
-                             "description":"xyz"
-                             }
-                     }
-                 },
-             "zzz":{
-                 "ddd":{
-                     "description":"xyz"
-                     }
-                 }
-             },
-         "zzz":{
-             "description":"xyz"
-             }
-         }
-    }
-}
-     }
+x = [1, 2, 3]
 
 #%%
 
-def find(d, keys=("aaa", "zzz")):
-    if isinstance(d, dict):
-        if all(k in d for k in keys):
-            yield tuple((k, d[k]) for k in keys)
-        for v in d.values():
-            yield from find(v, keys)
-    elif isinstance(d, list):
-        for v in d:
-            yield from find(v, keys)
+# this appends a list containing the two integers 4 & 5
+x.append ([4, 5])
 
-print(list(find(d)))
+# running that again appends a second identical (of course)  list
+
+# this appends a new items similar to the original ones, an integer.
+x.append(6)
+
+#%%
+
+# extends (with same format as first append), adds the integers themselves
+x.extend([7, 8])
+
+#%%
+
+x.extend([101, 500])
+
+# items being added don't need to be next in order obvs..
