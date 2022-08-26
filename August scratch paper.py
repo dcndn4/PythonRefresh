@@ -327,6 +327,7 @@ x = [1, 2, 3]
 
 #%%
 
+# officially: this appends object, increases amount of things in list by 1
 # this appends a list containing the two integers 4 & 5
 x.append ([4, 5])
 
@@ -337,6 +338,7 @@ x.append(6)
 
 #%%
 
+# officially: this extends list by adding elements - increases amount of things in list by number of elements being added
 # extends (with same format as first append), adds the integers themselves
 x.extend([7, 8])
 
@@ -345,3 +347,28 @@ x.extend([7, 8])
 x.extend([101, 500])
 
 # items being added don't need to be next in order obvs..
+
+#%%
+
+x = x + [15, 17]
+
+#%%
+
+new_list = x + [72]
+
+fruit_list = ['apple', 'orange']
+
+new_list.append(fruit_list)
+
+veg_list = ['beet', 'onion']
+#%%
+
+new_list.extend(veg_list)
+
+other_list = [12, 15, 17]
+
+# each element of iterable gets added to list individually
+
+other_list.extend('eighteen')
+
+#%%
