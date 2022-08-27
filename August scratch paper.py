@@ -463,7 +463,7 @@ forward_list = [0, 10, 20, 30]
 
 print(list(reversed(forward_list)))
 
-#reverse does the task of presenting a list contents in reverse order
+#reverse this way does the task of presenting a list contents in reverse order
 
 for x in reversed(forward_list):
     print (x)
@@ -476,6 +476,16 @@ for x in reversed(forward_list):
 print(forward_list[::-1])
 
 #%%
+
+xs.reverse()
+
+#%%
+
+forward_list.reverse()
+
+# doing that does reverse the  list itself. 
+
+# plus more yet!
 
 
 
