@@ -435,7 +435,47 @@ xs.extend(['G', 'H'])
 
 #%%
 
+dict1 = {"key1": "booka", "key2": "recordb"}
 
+#%%
+
+import copy
+
+dict2 = copy.deepcopy(dict1)
+
+dict2["key3"] = "soundc"
+
+# deepcopy makes whole different dictionary, separate from original dictionary. Changes to that new, independent dictionary 
+# do not affect original dictionary.
+
+# notice of comment - deep copy can introduce 'silent bugs' and should be avoided.. hmmm. related to cyclic
+# reference handling possibly, self-referential ordered dictionary. 
+
+# Python objec model - crucial
+
+# seems maybe problems existed in prior versions, now more ok..
+
+# much discussion q 2465921
+
+#%%
+
+forward_list = [0, 10, 20, 30]
+
+print(list(reversed(forward_list)))
+
+#reverse does the task of presenting a list contents in reverse order
+
+for x in reversed(forward_list):
+    print (x)
+    
+    
+#%%
+
+# other method - slice functionality
+
+print(forward_list[::-1])
+
+#%%
 
 
 
