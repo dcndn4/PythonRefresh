@@ -350,7 +350,7 @@ x.extend([101, 500])
 
 #%%
 
-x = x + [15, 17]
+z = x + [15, 17]
 
 #%%
 
@@ -364,7 +364,7 @@ veg_list = ['beet', 'onion']
 #%%
 
 new_list.extend(veg_list)
-
+#%%
 other_list = [12, 15, 17]
 
 # each element of iterable gets added to list individually
@@ -372,3 +372,13 @@ other_list = [12, 15, 17]
 other_list.extend('eighteen')
 
 #%%
+
+Saturday_list = ['chore', 'rest', 'progress']
+
+#%%
+# adding the two lists creates a valid result that exists in memory, doesn't have a name etc.. so can't be referenced
+
+print(veg_list + Saturday_list)
+
+
+
