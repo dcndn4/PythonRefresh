@@ -487,5 +487,19 @@ forward_list.reverse()
 
 # plus more yet!
 
+#%%
+
+geo = [1, 2, 3, 4, 5]
+import pickle
+
+f1 = open('results.pickle', 'wb')
+
+pickle.dump(geo, f1)
+
+f1.close()
+
+# pickle - fascinating!
+
+#%%
 
 
