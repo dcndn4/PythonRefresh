@@ -380,5 +380,62 @@ Saturday_list = ['chore', 'rest', 'progress']
 
 print(veg_list + Saturday_list)
 
+#%%
+
+# performance review
+
+def append(alist, iterable):
+    for item in iterable:
+        alist.append(item)
+        
+def extend(alist, iterable):
+    alist.extend(iterable)
+    
+#%%
+
+import timeit
+
+print(min(timeit.repeat(lambda: append([], "abcdefghijklmnopqrstuvwxyz:"))))
+
+# result 1.64223
+
+#%%
+
+print(min(timeit.repeat(lambda: extend([], "abcdefghijklmnopqrstuvwxyz:"))))
+
+# result .3787   --- much faster!
+
+#%%
+
+# append, insert and extend!
+
+xs =  ['A', 'B']
+
+xs.append('D')
+
+#%%
+
+xs.append(['E', 'F'])
+
+# upper limit of what you can achieve in one 'append' step is one change -- an item or list (or dictionary?).. to add more 
+# than one item at a time, use extend.
+
+#%%
+
+xs.insert(2, 'C')
+
+# puts it in to specific position!
+
+#%%
+
+xs.extend(['G', 'H'])
+
+# formatted same as append above , result is diff: iterated over new items vs. added as a whole (in 'nested' fashion)
+# extend is 'implemented in C' .. within .. python..... so there's that. 
+
+#%%
+
+
+
 
 
