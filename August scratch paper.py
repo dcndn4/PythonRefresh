@@ -502,4 +502,65 @@ f1.close()
 
 #%%
 
+whole = [9, 8, 7, 6]
+part = whole.index(6)
+# result .. part= 3, because the number 6 is in 3rd position
+
+del whole[part]
+
+# now whole is without the element 6, because deleted it
+
+#%%
+
+big_list = [10, 12, 21, 14, 18, 9, 21, 2, 15, 10, 14, 3]
+
+#%%
+# remove first instance of item in parenthesis
+
+big_list.remove(18)
+
+
+#%%
+
+# removes first instance only of thing in list multiple times
+
+big_list.remove(21)
+
+#%%
+
+# remove all instances of something
+
+# list comprehension version
+
+big_list = [z for z in big_list if z != 14]
+
+#%%
+
+# regular version
+
+def remove_all(seq, value):
+    pos = 0
+    for item in seq:
+        if item != value:
+            seq[pos] = item
+            pos += 1
+    del seq[pos:]
+
+#%%
+
+remove_all(big_list, 10)
+
+
+#%%
+
+big_list.extend([77, 88, 15, 95, 42, 67, 82, 55, 42, 17, 42])
+#%%
+
+# another way
+
+big_list = list(filter(lambda x: x!=42, big_list))
+
+#%%
+
+
 
