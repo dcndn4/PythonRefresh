@@ -294,4 +294,17 @@ if __name__ == '__main__':
     function_b()
 print("after __name__ guard")
 
+#%%
+
+help(dict.pop)
+
+#%%
+
+import pandas as pd
+import pandas_datareader as  web # don't have this one # pip install needed
+import matplotlib.pyplot as pp
+import datetime
+
+#%%
+
 
