@@ -307,4 +307,48 @@ import datetime
 
 #%%
 
+someTuple = (1, 2)
+someList = [13, 17]
 
+#%%
+
+b = [1, 2]
+
+#%%
+
+print(b[0])
+
+b[0] = 3
+
+#%%
+
+a = (5,7)
+
+print(a[0]) 
+
+a[0]=15
+
+# can't change a tuple! can change a list!!
+
+#%%
+
+print(id(a))
+
+print(id(b))
+
+#%%
+
+a += (20,)
+
+b += [25]
+
+#%%
+
+print(id(a))
+print(id(b))
+
+# id for list is the same (contents are changed), id for tuple is different - replaced prior tuple
+
+# this helps my understanding enormously! 
+
+#%%
