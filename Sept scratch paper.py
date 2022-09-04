@@ -352,3 +352,38 @@ print(id(b))
 # this helps my understanding enormously! 
 
 #%%
+
+# tuple can be used as a key in a dictionary, list can't be
+
+possibleDictkeyfromlist = {b: 1}
+
+# error: unhashable type: 'list'
+
+#%%
+
+possibleDictkeyfromtuple = {a: 1}
+
+# it works! Definitely an odd key since didn't follow the guide, but results the same!
+
+#%%
+
+import numpy as np
+l = np.arange(9).reshape(3,3)
+print(l)
+idx = (1,1)
+print(l[idx])
+
+# result is 4 - the 2nd item from 2nd row of array
+#%%
+
+edx = [1,1]
+
+#%%
+print(l[edx])
+
+# result is the 2nd row or array, twice
+
+
+# these numpy aspects show that numpy works differently with lists vs tuples also
+
+#%%
