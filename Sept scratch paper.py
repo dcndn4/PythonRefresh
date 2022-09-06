@@ -387,3 +387,31 @@ print(l[edx])
 # these numpy aspects show that numpy works differently with lists vs tuples also
 
 #%%
+
+words = ["this", "is", "a", "sentence"]
+#%%
+
+print('-'.join(words))
+
+# updates what is printed, doesn't change list itself
+
+#%%
+
+
+new = ["today", "is", "Monday"]
+
+print(id(new))
+
+# id answer 1835318484096
+
+#%%
+
+print('**'.join(new))
+
+print(id(new))
+
+# same id.
+
+#%%
+
+
