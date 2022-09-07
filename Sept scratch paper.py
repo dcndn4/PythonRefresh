@@ -427,6 +427,30 @@ z = {**x, **y}
 
 #%%
 
+x['m'] = 15
 
+# to add an additional key/value pair to an existing dictionary.
 
+#%%
 
+y['f'] = 22
+
+# to change the existing value paired with an existing key, to something else
+
+#%%
+
+y.update({'z': 30})
+
+# another way to add a pair to existing dictionary
+
+#%%
+
+q = {'m': 'stone', 'n': 'rock'}
+
+#%%
+
+x.update(q)
+
+# that works too! Contents don't need to conform in characteristics.
+
+#%%
