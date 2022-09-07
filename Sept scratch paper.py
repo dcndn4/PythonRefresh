@@ -414,4 +414,19 @@ print(id(new))
 
 #%%
 
+x = {'a': 1, 'b': 3, 'c': 5, 'd': 7, 'e':9}
+y = {'e':10, 'f': 12, 'g': 14, 'h': 16, 'i': 18}
+
+#%%
+
+# z = x | y   is 3.9, I'm on 3.8 still (gotta upgrade one of these days)
+
+z = {**x, **y}
+
+# this results in the key in both taking its value from the 2nd dictionary in the expression
+
+#%%
+
+
+
 
