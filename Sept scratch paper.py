@@ -454,3 +454,25 @@ x.update(q)
 # that works too! Contents don't need to conform in characteristics.
 
 #%%
+
+if "e" in y:
+    print('e is in y')
+    
+#Loop to check if value is in dictionary
+
+#%%
+
+# list of dictionaries.. list of paired values
+
+tv = {'name': 'Homer', 'age': 39}
+#%%
+
+tv.update({'name': 'Bart', 'age': 10})
+
+#%%
+
+prior = {'name': 'Homer', 'age': 39}
+#%%
+tv.update(prior)
+
+#%%
