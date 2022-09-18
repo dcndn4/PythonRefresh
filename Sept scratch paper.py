@@ -498,3 +498,11 @@ for item in example_box:
 print(sum(item['gold'] for item in example_box))
 
 #%%
+
+print(sum(item['gold'] for item in example_box))
+
+#%%
+
+print(sum([item['gold'] for item in example_box]))
+
+#%%
