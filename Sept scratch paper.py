@@ -474,5 +474,27 @@ tv.update({'name': 'Bart', 'age': 10})
 prior = {'name': 'Homer', 'age': 39}
 #%%
 tv.update(prior)
+#%%
+
+# list of dictionaries
+
+example_box = [
+        {'points':400, 'gold': 2480},
+        {'points':100, 'gold': 610},
+        {'points': 100, 'gold': 620},
+        {'points': 100, 'gold': 620}
+        ]
+
+#%%
+
+# to sum that list of dictionaries
+
+total_gold = 0
+for item in example_box:
+    total_gold += example_box['gold']
+    
+#%%
+
+print(sum(item['gold'] for item in example_box))
 
 #%%
